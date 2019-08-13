@@ -1,6 +1,6 @@
-# React Native Base Snippets README
+# React Native Elements Snippets README
 
-Automatically adds React Native Base snippets to your React Native Apps. 
+Automatically adds React Native Elements snippets to your React Native Apps. 
 + Required Expo 32 and Above and React Native 0.59
 
 
@@ -18,60 +18,239 @@ TypeScript React (.tsx)
 
 Basic Methods
 
-`!rnbaccordian` ===> <br>
+`!rneavatar` ===> <br>
 
-![Accordian](images/accordian.png)
+```javascript
+import { Avatar } from 'react-native-elements';
 
-`!rnbbadge` ===> <br>
+// Standard Avatar
+<Avatar
+  rounded
+  source={{
+    uri:
+      'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+  }}
+/>
 
-![Badge](images/badge.png)
+// Avatar with Title
+<Avatar rounded title="MD" />
+
+// Avatar with Icon
+<Avatar rounded icon={{ name: 'home' }} />
+
+// Standard Avatar with edit button
+<Avatar
+  source={{
+    uri:
+      'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+  }}
+  showEditButton
+/>
+```
+
+`!rnebadge` ===> <br>
+
+```javascript
+import { Text, View } from 'react-native'
+import { Avatar, Badge, Icon, withBadge } from 'react-native-elements'
+
+<Badge value="99+" status="error" />
+<Badge value={<Text>My Custom Badge</Text>}>
+
+<Badge status="success" />
+<Badge status="error" />
+<Badge status="primary" />
+<Badge status="warning" />
+
+<View>
+  <Avatar
+    rounded
+    source={{
+      uri: 'https://randomuser.me/api/portraits/men/41.jpg',
+    }}
+    size="large"
+  />
+
+  <Badge
+    status="success"
+    containerStyle={{ position: 'absolute', top: -4, right: -4 }}
+  />
+</View>
 
 
-`!rnbbutton` ===> <br>
+const BadgedIcon = withBadge(1)(Icon)
+<BadgedIcon type="ionicon" name="ios-chatbubbles" />
 
-![Button](images/button.png)
+@connect(state => ({
+  notifications: state.notifications,
+}))
+@withBadge(props => props.notifications.length)
+export default class MyDecoratedIcon extends React.Component {
+  render() {
+    return (
+      <Icon type="ionicon" name="md-cart" />
+    );
+  }
+}
+```
+
+`!rnebutton` ===> <br>
+
+```javascript
+import { Button } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
+<Button
+  title="Solid Button"
+/>
+
+<Button
+  title="Outline button"
+  type="outline"
+/>
+
+<Button
+  title="Clear button"
+  type="clear"
+/>
+
+<Button
+  icon={
+    <Icon
+      name="arrow-right"
+      size={15}
+      color="white"
+    />
+  }
+  title="Button with icon component"
+/>
+
+<Button
+  icon={{
+    name: "arrow-right",
+    size: 15,
+    color: "white"
+  }}
+  title="Button with icon object"
+/>
+
+<Button
+  icon={
+    <Icon
+      name="arrow-right"
+      size={15}
+      color="white"
+    />
+  }
+  iconRight
+  title="Button with right icon"
+/>
+
+<Button
+  title="Loading button"
+  loading
+/>
+```
+
+`!rnecard` ===> <br>
+
+```javascript
+const users = [
+ {
+    name: 'brynn',
+    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg'
+ },
+ ... // more users here
+]
+
+import { View, Text, Image } from 'react-native'
+import { Card, ListItem, Button, Icon } from 'react-native-elements'
+
+// implemented without image with header
+<Card title="CARD WITH DIVIDER">
+  {
+    users.map((u, i) => {
+      return (
+        <View key={i} style={styles.user}>
+          <Image
+            style={styles.image}
+            resizeMode="cover"
+            source={{ uri: u.avatar }}
+          />
+          <Text style={styles.name}>{u.name}</Text>
+        </View>
+      );
+    })
+  }
+</Card>
+```
+
+`!rnecheckbox` ===> <br>
+
+```javascript
+import { CheckBox } from 'react-native-elements'
+
+<CheckBox
+  title='Click Here'
+  checked={this.state.checked}
+/>
+```
+
+`!rneheader` ===> <br>
+
+```javascript
+<Header
+  leftComponent={{ icon: 'menu', color: '#fff' }}
+  centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
+  rightComponent={{ icon: 'home', color: '#fff' }}
+/>
+```
 
 
-`!rnbcard` ===> <br>
+`!rneinput` ===> <br>
 
-![Card](images/card.png)
+```javascript
+import Icon from 'react-native-vector-icons/FontAwesome';
+import { Input } from 'react-native-elements';
 
-`!rnbcheckbox` ===> <br>
+<Input
+  placeholder='BASIC INPUT'
+/>
+```
 
-![Checkbox](images/checkbox.png)
+`!rnetooltip` ===> <br>
 
-`!rnbadatepicker` ===> <br>
-
-![Accordian](images/search.png)
-
-
-`!rnbform` ===> <br>
-
-![Form](images/form.png)
-
-
-`!rnbheader` ===> <br>
-
-![header](images/header.png)
+```javascript
+import { Tooltip, Text } from 'react-native-elements';
 
 
-`!rnblist` ===> <br>
+<Tooltip popover={<Text>Info here</Text>}>
+  <Text>Press me</Text>
+</Tooltip>
+```
 
-![Accordian](images/list.png)
+`!rnetile` ===> <br>
 
+```javascript
+import { Tile } from 'react-native-elements';
 
-`!rnbpicker` ===> <br>
+<Tile
+  imageSrc={require('./img/path')}
+  title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores dolore exercitationem"
+  featured
+  caption="Some Caption Text"
+/>;
+```
 
-![Picker](images/picker.png)
+`!rnetext` ===> <br>
 
+```html
+<Text h1>Heading 1</Text>
+<Text h2>Heading 2</Text>
+<Text h3>Heading 3</Text>
+<Text h4>Heading 4</Text>
+```
 
-`!rnbradio` ===> <br>
-
-![Radio](images/radio.png)
-
-`!rnbasearchbar` ===> <br>
-
-![Search](images/searchbar.png)
 
 
 
@@ -95,7 +274,7 @@ Calling out known issues can help limit users opening duplicate issues against y
 
 ### 1.0.0
 
-Initial release of React Native Base Snippets
+Initial release of React Native Elements Snippets
 
 
 -----------------------------------------------------------------------------------------------------------

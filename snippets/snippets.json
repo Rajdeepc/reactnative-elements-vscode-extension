@@ -1,0 +1,225 @@
+{
+    "React Native Elements Avatar Template": {
+        "prefix": "!rneavatar",
+        "body": [
+            "import { Avatar } from \"react-native-elements\";",
+            "<Avatar",
+            "rounded",
+            "source={{uri:\"https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg\",",
+            "}}",
+            "/>",
+            "<Avatar rounded title=\"MD\" />",
+            "<Avatar rounded icon={{ name: \"home\" }} />",
+            "<Avatar",
+            "source={{",
+            "uri:",
+            "\"https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg\",",
+            "}}",
+            "showEditButton",
+            "/>"
+        ],
+        "description": "React Native Elements Avatar Template"
+    },
+    "React Native Elements Avatar With Badge": {
+        "prefix": "!rnebadge",
+        "body": [
+            "import { Text, View } from \"react-native\"",
+            "import { Avatar, Badge, Icon, withBadge } from \"react-native-elements\"",
+            "<View>",
+            "<Avatar",
+            "rounded",
+            "source={{",
+            "uri: 'https://randomuser.me/api/portraits/men/41.jpg',",
+            "}}",
+            "size=\"large\"",
+            "/>",
+            "<Badge",
+            "status=\"success\"",
+            "containerStyle={{ position: \"absolute\", top: -4, right: -4 }}",
+            "/>",
+            "</View>"
+        ],
+        "description": "React Native Elements Avatar With Badge"
+    },
+    "React Native Elements Button": {
+        "prefix": "!rnebutton",
+        "body": [
+            "import { Button } from \"react-native\"",
+            "import Icon from \"react-native-vector-icons/FontAwesome\";",
+            "<Button",
+            "title=\"Solid Button\"",
+            "/>",
+            "<Button",
+            "title=\"Outline button\"",
+            "type=\"outline\"",
+            "/>",
+            "<Button",
+            "title=\"Clear button\"",
+            "type=\"clear\"",
+            "/>",
+            "<Button",
+            "icon={",
+            "<Icon",
+            "name=\"arrow-right\"",
+            "size={15}",
+            "color=\"white\"",
+            "/>",
+            "}",
+            "title=\"Button with icon component\"",
+            "/>",
+            "<Button",
+            "icon={{",
+            "name: \"arrow-right\",",
+            "size: 15",
+            "color: \"white\"",
+            "}}",
+            "title=\"Button with icon object\"",
+            "/>",
+            "<Button",
+            "icon={",
+            "<Icon",
+            "name=\"arrow-right\"",
+            "size={15}",
+            "color=\"white\"",
+            "/>",
+            "}",
+            "iconRight",
+            "title=\"Button with right icon\"",
+            "/>",
+            "<Button",
+            "title=\"Loading button\"",
+            "loading",
+            "/>"
+        ],
+        "description": "React Native Elements Button"
+    },
+    "React Native Elements Card": {
+        "prefix": "!rnecard",
+        "body": [
+            "import { Text, View, Image } from \"react-native\"",
+            "import { Card, ListItem, Button, Icon } from \"react-native-elements\"",
+            "<Card title=\"CARD WITH DIVIDER\">",
+            "{",
+            "users.map((u, i) => {",
+            "return (",
+            "<View key={i} style={styles.user}>",
+            "<Image",
+            "style={styles.image}",
+            "resizeMode=\"cover\"",
+            "source={{ uri: u.avatar }}",
+            "/>",
+            "<Text style={styles.name}>{u.name}</Text>",
+            "</View>",
+            ");",
+            "})",
+            "}",
+            "</Card>"
+        ],
+        "description": "React Native Elements Card"
+    },
+    "React Native Elements CheckBox": {
+        "prefix": "!rnecheckbox",
+        "body": [
+            "import { CheckBox } from \"react-native-elements\"",
+            "<CheckBox",
+            "center",
+            "title='Click Here to Remove This Item'",
+            "iconRight",
+            "iconType='material'",
+            "checkedIcon='clear'",
+            "uncheckedIcon='add'",
+            "checkedColor='red'",
+            "checked={this.state.checked}",
+            "/>"
+        ],
+        "description": "React Native Elements CheckBox"
+    },
+    "React Native Elements Header": {
+        "prefix": "!rneheader",
+        "body": [
+            "<Header",
+            "leftComponent={{ icon: \"menu\", color: \"#fff\" }}",
+            " centerComponent={{ text: \"MY TITLE\", style: { color: \"#fff\" } }}",
+            "rightComponent={{ icon: \"home\", color: \"#fff\" }}",
+            "/>"
+        ],
+        "description": "React Native Elements Header"
+    },
+    "React Native Elements Input": {
+        "prefix": "!rneinput",
+        "body": [
+            "import { Input } from \"react-native-elements\";",
+            "<Input",
+            "placeholder=\"BASIC INPUT\"",
+            "/>"
+        ],
+        "description": "React Native Elements Input"
+    },
+    "React Native Elements ListItem": {
+        "prefix": "!rnelistitem",
+        "body": [
+            "import { ListItem } from \"react-native-elements\"",
+            "const list = [",
+            "{",
+            "name: \"Amy Farha\",",
+            "avatar_url: \"https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg\",",
+            "subtitle: \"Vice President\"",
+            "},",
+            "{",
+            "name: 'Chris Jackson',",
+            "avatar_url: \"https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg\",",
+            "subtitle: \"Vice Chairman\"",
+            "},",
+            "]",
+            "<View>",
+            "{",
+            "list.map((l, i) => (",
+            "<ListItem",
+            "key={i}",
+            "leftAvatar={{ source: { uri: l.avatar_url } }}",
+            "title={l.name}",
+            "subtitle={l.subtitle}",
+            "/>",
+            "))",
+            "}",
+            "</View>"
+        ],
+        "description": "React Native Elements ListItem"
+    },
+    "React Native Elements ToolTip": {
+        "prefix": "!rnetooltip",
+        "body": [
+            "import { Tooltip, Text } from \"react-native-elements\"",
+            "<Tooltip popover={<Text>Info here</Text>}>",
+            "<Text>Press me</Text>",
+            "</Tooltip>"
+        ],
+        "description": "React Native Elements ToolTip"
+    },
+    "React Native Elements Tile": {
+        "prefix": "!rnetile",
+        "body": [
+            "import { Tile } from \"react-native-elements\"",
+            "<Tile",
+            "imageSrc={require('./img/path')}",
+            "title=\"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores dolore exercitationem\"",
+            "featured",
+            "caption=\"Some Caption Text\"",
+            "/>;"
+        ],
+        "description": "React Native Elements Tile"
+    },
+    "React Native Elements Text": {
+        "prefix": "!rnetext",
+        "body": [
+            "import { Tile } from \"react-native-elements\"",
+            "<Tile",
+            "imageSrc={require('./img/path')}",
+            "title=\"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores dolore exercitationem\"",
+            "featured",
+            "caption=\"Some Caption Text\"",
+            "/>;"
+        ],
+        "description": "React Native Elements Text"
+    }
+}

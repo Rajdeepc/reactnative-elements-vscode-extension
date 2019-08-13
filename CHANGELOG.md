@@ -1,9 +1,9 @@
 # Change Log
 
-All notable changes to the "reactnativesnippets" extension will be documented in this file.
+All notable changes to the "react native elements snippets" extension will be documented in this file.
 
 
 
 ## [1.0.0]
 
-- Initial release of React Native Snippets extension
+- Initial release of React Native Elements Snippets extension
